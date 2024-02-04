@@ -5,10 +5,10 @@ import Hero from "@components/Hero.astro";
 import Projects from "@components/Projects.astro";
 import Skills from "@components/Skills.astro";
 import Summary from "@components/Summary.astro";
-import Layout from "@layouts/Layout.astro";
+import Resume from "@layouts/Resume.astro";
 ---
 
-<Layout title="Information about me">
+<Resume title="Information about me">
   <main class="container-grid">
     <Hero />
     <Summary />
@@ -17,17 +17,18 @@ import Layout from "@layouts/Layout.astro";
     <Projects />
     <Skills />
   </main>
-</Layout>
+</Resume>
 
 <style is:global>
   .container-grid {
     --padding-inline: 1rem;
     --content-max-width: 720px;
     --breakout-size: calc(
-      var(--content-max-width) / 2
+      100vw - var(--content-max-width) / 2
     );
 
     display: grid;
+    gap: 1.25rem 0;
     grid-template-columns:
       minmax(var(--padding-inline), var(--breakout-size))
       [content-start] min(
@@ -40,5 +41,8 @@ import Layout from "@layouts/Layout.astro";
 
   .container-grid > section {
     grid-column: content;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
   }
 </style>
