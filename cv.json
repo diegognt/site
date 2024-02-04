@@ -6,7 +6,7 @@
     "email": "hello@giegognt.dev",
     "phone": "",
     "url": "https://diegognt.dev",
-    "summary": "Dedicated Software Engineer with over 8 years of experience in developing intuitive and high-performing web user experiences. Proficient in programming languages like JavaScript, TypeScript, and Python. Skilled in modern UI libraries, particularly React and its associated ecosystem, with a strong emphasis on delivering clean and maintainable code. Proven track record in technical leadership, effective communication, and collaborating across disciplines to ensure exceptional user experiences and project success.",
+    "summary": "Dedicated Software Engineer with +9 years of experience in developing intuitive and high-performing web user experiences. Proficient in programming languages like JavaScript, TypeScript, and Python. Skilled in modern UI libraries, particularly React and its associated ecosystem, with a strong emphasis on delivering clean and maintainable code. Proven track record in technical leadership, effective communication, and collaborating across disciplines to ensure exceptional user experiences and project success.",
     "location": {
       "address": "Calle 86A #69T-41",
       "postalCode": "110221",
@@ -16,52 +16,51 @@
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
+        "network": "GitHub",
+        "username": "diegognt",
+        "url": "https://github.com/diegognt"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "diegognt",
+        "url": "https://www.linkedin.com/in/diego-navarro-tesillo-79387b19/"
       }
     ]
   },
   "work": [
     {
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
-      "highlights": ["Started the company"]
-    }
-  ],
-  "volunteer": [
+      "name": "Huge Inc.",
+      "position": "Senior UI Engineer",
+      "url": "https://hugeinc.com",
+      "startDate": "April, 2021",
+      "endDate": "Today",
+      "summary": "",
+      "highlights": [
+        "Streamlined forms creation by integrating a headless CMS and leveraging existing React components. Implemented dynamic rendering of forms based on CMS definitions. Resulted in a 25% reduction in development time compared to initial estimates, optimizing workflows and enhancing efficiency",
+        "Mentored junior engineers, providing them with guidance on their career development. Held regular 1:1 sessions to offer guidance, constructive feedback, and set goals for growth",
+        "Led a team of 3 software engineers and one QA to handle the development of the Google Privacy Sandbox initiative website."
+      ]
+    },
     {
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": ["Awarded 'Volunteer of the Month'"]
+      "name": "Huge Inc.",
+      "position": "Frontend Engineer",
+      "url": "https://hugeinc.com",
+      "startDate": "July, 2017",
+      "endDate": "March, 2021",
+      "summary": "",
+      "highlights": [
+        "Built a tool using the Lighthouse NodeJS API and Google Sheets API to monitor the Lighthouses score of the android.com site, boosting the site scores and reducing the bounce rate by 3% over a week",
+        "Built a tool using NodeJS and Puppetier.js for text mining and web crawler for collecting non-English content from the Google Workspace legacy site and put it in a documental DB, reducing the initial estimation of effort by",
+        "Built a visual regression test suite using Puppeteer.js and BackstopJS, for the Google Workspace legacy site that helped to reduced the amount of bugs reported on production by 10% over a month."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
+      "institution": "Universidad Tecnologica de Bolivar, Cartagena, Colombia",
+      "area": "Systems Engineering",
       "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
-    }
-  ],
-  "awards": [
-    {
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
+      "endDate": "April, 2017"
     }
   ],
   "certificates": [
@@ -72,48 +71,18 @@
       "url": "https://certificate.com"
     }
   ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }
-  ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "JavaScript"]
-    }
-  ],
-  "languages": [
+      "name": "Technical leadership"
+    },
     {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
+      "name": "Effective self-management"
+    },
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
+      "name": "Effective communication"
+    },
     {
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/"
+      "name": "Collaboration with other disciplines"
     }
   ]
 }
