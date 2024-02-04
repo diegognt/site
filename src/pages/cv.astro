@@ -1,0 +1,44 @@
+---
+import Education from "@components/Education.astro";
+import Experience from "@components/Experience.astro";
+import Hero from "@components/Hero.astro";
+import Projects from "@components/Projects.astro";
+import Skills from "@components/Skills.astro";
+import Summary from "@components/Summary.astro";
+import Layout from "@layouts/Layout.astro";
+---
+
+<Layout title="Information about me">
+  <main class="container-grid">
+    <Hero />
+    <Summary />
+    <Experience />
+    <Education />
+    <Projects />
+    <Skills />
+  </main>
+</Layout>
+
+<style is:global>
+  .container-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 720px;
+    --breakout-size: calc(
+      var(--content-max-width) / 2
+    );
+
+    display: grid;
+    grid-template-columns:
+      minmax(var(--padding-inline), var(--breakout-size))
+      [content-start] min(
+        100% - (var(--padding-inline) * 2),
+        var(--content-max-width)
+      )
+      [content-end]
+      minmax(var(--padding-inline), var(--breakout-size));
+  }
+
+  .container-grid > section {
+    grid-column: content;
+  }
+</style>
