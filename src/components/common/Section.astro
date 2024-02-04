@@ -1,0 +1,17 @@
+---
+const { title } = Astro.props;
+---
+
+<section>
+  {title && <h2>{title}</h2>}
+  <slot />
+</section>
+
+<style>
+  h2 {
+    color: hsl(var(--grey-five));
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+</style>
