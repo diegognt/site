@@ -1,0 +1,27 @@
+---
+import { basics } from "@cv";
+import MailMe from "@components/MailMe.astro";
+import SocialProfile from "@components/SocialProfile.astro";
+
+const { profiles } = basics;
+---
+
+<address class="social">
+  <MailMe />
+  {
+    profiles.map(({ network, url }: { network: string; url: string }) => (
+      <SocialProfile network={network} url={url} />
+    ))
+  }
+</address>
+
+<style>
+  .social {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+</style>
