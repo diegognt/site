@@ -1,24 +1,53 @@
 ---
 import { basics } from "@cv";
-import Section from "./common/Section.astro";
+import Section from "@components/common/Section.astro";
+import Social from "@components/Social.astro";
 
 const { name, label, location } = basics;
 const { city, region, countryCode } = location;
 ---
 
-<Section>
-  <h1>{name}</h1>
-  <p>{label}</p>
-  <footer>
-    <address>
-      <p>{city}, {region}, {countryCode}</p>
-    </address>
-  </footer>
+<Section direction="row" justify="space-between">
+  <div class="personal">
+    <h1 class="name">{name}</h1>
+    <p class="label">{label}</p>
+    <footer>
+      <address class="contact">
+        <p class="location">
+          {city}, {region}, {countryCode}
+        </p>
+      </address>
+    </footer>
+  </div>
+  <Social />
 </Section>
 
 <style>
-  address > p {
+  .name {
+    color: hsl(var(--grey-five));
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .label {
+    color: hsl(var(--grey-six));
+    font-size: 1.125rem;
+    line-height: 2;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .contact > p.location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
     color: hsl(var(--grey-four));
-    font-size: 0.85rem;
+    line-height: 1;
   }
 </style>
