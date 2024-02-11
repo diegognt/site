@@ -1,0 +1,38 @@
+---
+import { basics } from "@cv";
+import Email from "@icons/Email.astro";
+
+const { name, email } = basics;
+---
+
+<a
+  title=`Opens an email client to compose an email to ${name}`
+  href=`mailto:${email}`
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  {email}
+  <Email size="20" />
+</a>
+
+<style>
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: hsl(var(--grey-three));
+    stroke: hsl(var(--grey-three));
+  }
+
+
+  a:focus-visible {
+    outline: 2px solid hsl(var(--black));
+    outline-offset: 2px;
+  }
+
+</style>
