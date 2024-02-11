@@ -1,0 +1,45 @@
+---
+import { basics } from "@cv";
+import LinkedIn from "@icons/LinkedIn.astro";
+import GitHub from "@icons/GitHub.astro";
+import type { JSX } from "astro/jsx-runtime";
+
+const { network, url } = Astro.props;
+const { name } = basics;
+const icons: Record<string, JSX.Element> = {
+  LinkedIn: LinkedIn,
+  GitHub: GitHub,
+};
+const Icon: JSX.Element = icons[network];
+---
+
+<a
+  title={`Opens ${name} ${network} profile in a new tab`}
+  href={url}
+  target="_blank"
+  rel="noopener"
+>
+  {network}
+  <Icon size="22" />
+</a>
+
+<style>
+  a {
+    color: hsl(var(--grey-five));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    trasition: color 0.25s ease;
+  }
+
+  a:hover {
+    color: hsl(var(--grey-three));
+    stroke: hsl(var(--grey-three));
+  }
+
+
+  a:focus-visible {
+    outline: 2px solid hsl(var(--black));
+    outline-offset: 2px;
+  }
+</style>
