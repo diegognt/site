@@ -1,0 +1,16 @@
+---
+const { name } = Astro.props;
+---
+
+<span class="skill">{name}</span>
+
+<style>
+  .skill {
+    background-color: hsl(var(--grey-five));
+    border-radius: 0.25rem;
+    color: hsl(var(--white));
+    font-size: 0.75rem;
+    display: block;
+    padding: 0.25rem 0.325rem;
+  }
+</style>
