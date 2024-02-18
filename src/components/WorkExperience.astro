@@ -1,0 +1,65 @@
+---
+const { name, position, url, startDate, endDate, highlights } = Astro.props;
+---
+
+<article>
+  <header>
+    <div class="left">
+      <h3 class="company-name">
+        <a class="company-link" href={url} target="_blank" rel="noopener">
+          {name}
+        </a>
+      </h3>
+      <p class="compnay-position">{position}</p>
+    </div>
+    <div class="right">
+      <p class="companay-period">{startDate} - {endDate}</p>
+    </div>
+  </header>
+  <ul class="highlights-list">
+    {
+      highlights.map((highlight: string) => (
+        <li>
+          <p class="highlight">{highlight}</p>
+        </li>
+      ))
+    }
+  </ul>
+</article>
+
+<style>
+  header {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-name {
+    margin-bottom: 0.125rem;
+  }
+
+  .company-link:hover,
+  .company-link:focus-visible {
+    color: hsl(var(--grey-four));
+  }
+
+  .compnay-position {
+    color: hsl(var(--grey-four));
+  }
+
+  .companay-period {
+    color: hsl(var(--grey-four));
+  }
+  .highlights-list {
+    display: flex;
+    flex-direction: column;
+    gap: .325rem;
+    list-style-type: "\1F680";
+    padding-left: 1rem;
+  }
+
+  .highlight {
+    padding-inline-start: .5rem;
+  }
+</style>
