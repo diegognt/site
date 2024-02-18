@@ -73,6 +73,9 @@
   ],
   "skills": [
     {
+      "name": "Collaboration with other disciplines"
+    },
+    {
       "name": "Technical leadership"
     },
     {
@@ -80,9 +83,6 @@
     },
     {
       "name": "Effective communication"
-    },
-    {
-      "name": "Collaboration with other disciplines"
     }
   ]
 }
