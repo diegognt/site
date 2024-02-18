@@ -1,30 +1,25 @@
 ---
-import Section from "./common/Section.astro";
+import Section from "@components/common/Section.astro";
+import WorkExperience from "@components/WorkExperience.astro";
 import { work } from "@cv";
 ---
 
 <Section title="Work Experience">
-  <ul>
+  <ul class="experiences-list">
     {
-      work.map(({ name, position, url, startDate, endDate, highlights }) => (
-        <li>
-          <article>
-            <h3>
-              <a href={url} target="_blank" rel="noopener">
-                {name}
-              </a>
-            </h3>
-            <p>{position}</p>
-            <p>{startDate}</p>
-            <p>{endDate}</p>
-            <ul>
-              {highlights.map((highlight) => (
-                <li>{highlight}</li>
-              ))}
-            </ul>
-          </article>
+      work.map((experience) => (
+        <li class="experience">
+          <WorkExperience {...experience} />
         </li>
       ))
     }
   </ul>
 </Section>
+
+<style>
+  .experiences-list {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+  }
+</style>
