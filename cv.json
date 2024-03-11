@@ -59,9 +59,16 @@
     {
       "institution": "Universidad Tecnologica de Bolivar, Cartagena, Colombia",
       "area": "Systems Engineering",
-      "studyType": "Bachelor",
+      "studyType": "Bachelor Degree",
       "endDate": "April, 2017"
+    },
+    {
+      "institution": "Universidad Tecnologica de Bolivar, Cartagena, Colombia",
+      "area": "Systems Technology",
+      "studyType": "Associated Degree",
+      "endDate": "April, 2008"
     }
+
   ],
   "certificates": [
     {
@@ -83,6 +90,9 @@
     },
     {
       "name": "Effective communication"
+    },
+    {
+      "name": "Critical thinking"
     }
   ]
 }
