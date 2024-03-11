@@ -1,25 +1,10 @@
 ---
 import Section from "@components/common/Section.astro";
-import WorkExperience from "@components/WorkExperience.astro";
 import { work } from "@cv";
+import List from "@components/common/List.astro";
 ---
 
 <Section title="Work Experience">
-  <ul class="experiences-list">
-    {
-      work.map((experience) => (
-        <li class="experience">
-          <WorkExperience {...experience} />
-        </li>
-      ))
-    }
-  </ul>
+  <List type="WorkExperience" items={work} />
 </Section>
 
-<style>
-  .experiences-list {
-    display: flex;
-    flex-direction: column;
-    gap: .85rem;
-  }
-</style>

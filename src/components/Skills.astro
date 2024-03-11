@@ -1,19 +1,9 @@
 ---
 import Section from "@components/common/Section.astro";
-import Skill from "@components/Skill.astro";
+import List from "@components/common/List.astro";
 import { skills } from "@cv";
 ---
 
 <Section title="Skills">
-  <ul class="skills-list">
-    {skills.map(({name}) => <li><Skill name={name} /></li>)}
-  </ul>
+  <List type="Skill" items={skills} />
 </Section>
-
-<style>
-  .skills-list {
-    display: inline-flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-  }
-</style>
