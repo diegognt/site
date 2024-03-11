@@ -1,0 +1,53 @@
+---
+import Skill from "@components/Skill.astro";
+import Study from "@components/Study.astro";
+import WorkExperience from "@components/WorkExperience.astro";
+
+type ListType = 'WorkExperience' | 'Study' | 'Skill';
+type ItemComponent = typeof Study | typeof Skill | typeof WorkExperience;
+type ItemProp = Parameters<ItemComponent>[0];
+
+interface Props {
+  type: ListType;
+  items: ItemProp[];
+}
+
+const { type, items } = Astro.props;
+
+const availableItemComponents : Record<ListType, ItemComponent> = {
+  'WorkExperience': WorkExperience,
+  'Study': Study,
+  'Skill': Skill,
+};
+
+const Item: ItemComponent = availableItemComponents[type as ListType];
+---
+
+<ul class={`${type}-list`}>
+{ items.map((data: ItemProp) => (
+  <li class={`${type}-item`}>
+    {<Item {...data} />}
+  </li>
+))
+  }
+</ul>
+
+<style>
+  .WorkExperience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .Study-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .Skill-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+</style>
