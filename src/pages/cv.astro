@@ -1,5 +1,5 @@
 ---
-import Education from "@components/Education.astro";
+import AcademicBackground from "@components/AcademicBackground.astro";
 import Experience from "@components/Experience.astro";
 import Hero from "@components/Hero.astro";
 import Skills from "@components/Skills.astro";
@@ -7,12 +7,12 @@ import Summary from "@components/Summary.astro";
 import Resume from "@layouts/Resume.astro";
 ---
 
-<Resume title="Information about me">
+<Resume title="My Resume">
   <main class="container-grid">
     <Hero />
     <Summary />
     <Experience />
-    <Education />
+    <AcademicBackground />
     <Skills />
   </main>
 </Resume>
@@ -26,7 +26,7 @@ import Resume from "@layouts/Resume.astro";
     );
 
     display: grid;
-    gap: 1.25rem 0;
+    gap: 2.25rem 0;
     grid-template-columns:
       minmax(var(--padding-inline), var(--breakout-size))
       [content-start] min(
