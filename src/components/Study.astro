@@ -1,0 +1,28 @@
+---
+const { area, studyType, endDate, institution } = Astro.props;
+---
+
+<article class="study">
+  <header class="study-information">
+    <h3 class="study-name">{`${area}, ${studyType}`}</h3>
+    <time class="study-date">{endDate}</time>
+  </header>
+  <p class="study-institution">{institution}</p>
+</article>
+
+<style>
+  .study-information {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.325rem;
+  }
+
+  .study-name {
+    margin: 0.125rem;
+  }
+
+  .study-institution,
+  .study-date {
+    color: hsl(var(--grey-three));
+  }
+</style>
