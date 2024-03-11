@@ -1,0 +1,9 @@
+---
+import Section from "@components/common/Section.astro";
+import List from "@components/common/List.astro";
+import { education } from "@cv";
+---
+
+<Section title="Academic Background">
+  <List type="Study" items={education} />
+</Section>
