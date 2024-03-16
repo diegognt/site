@@ -1,8 +1,8 @@
 ---
-const { title, direction= "column", justify= "flex-start" } = Astro.props;
+const { title, customClass= "section", direction= "column", justify= "flex-start" } = Astro.props;
 ---
 
-<section>
+<section class={customClass}>
   {title && <h2>{title}</h2>}
   <slot />
 </section>
