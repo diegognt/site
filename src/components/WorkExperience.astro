@@ -1,4 +1,6 @@
 ---
+import List from "@components/common/List.astro";
+
 const { name, position, url, startDate, endDate, highlights } = Astro.props;
 ---
 
@@ -36,7 +38,7 @@ const { name, position, url, startDate, endDate, highlights } = Astro.props;
   }
 
   .company-name {
-    margin-bottom: 0.125rem;
+    margin-bottom: 0.25rem;
   }
 
   .company-link:hover,
@@ -51,15 +53,16 @@ const { name, position, url, startDate, endDate, highlights } = Astro.props;
   .companay-period {
     color: hsl(var(--grey-four));
   }
+
   .highlights-list {
     display: flex;
     flex-direction: column;
-    gap: .325rem;
+    gap: 0.625rem;
     list-style-type: "\1F680";
     padding-left: 1rem;
   }
 
   .highlight {
-    padding-inline-start: .5rem;
+    padding-left: 0.5rem;
   }
 </style>

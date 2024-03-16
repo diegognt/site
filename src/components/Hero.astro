@@ -7,7 +7,7 @@ const { name, label, location } = basics;
 const { city, region, countryCode } = location;
 ---
 
-<Section direction="row" justify="space-between">
+<Section customClass="hero" direction="row" justify="space-between">
   <div class="personal">
     <h1 class="name">{name}</h1>
     <p class="label">{label}</p>
@@ -23,6 +23,10 @@ const { city, region, countryCode } = location;
 </Section>
 
 <style>
+  .hero {
+    padding-top: 2rem;
+  }
+
   .name {
     color: hsl(var(--grey-five));
     font-size: 2.2rem;
