@@ -8,7 +8,7 @@ import Resume from "@layouts/Resume.astro";
 ---
 
 <Resume title="My Resume">
-  <main class="container-grid">
+  <main class="container-grid cv">
     <Hero />
     <Summary />
     <Experience />
@@ -39,5 +39,9 @@ import Resume from "@layouts/Resume.astro";
 
   .container-grid > section {
     grid-column: content;
+  }
+
+  .cv {
+    padding: 2.25rem 0;
   }
 </style>
