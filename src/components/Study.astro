@@ -18,11 +18,21 @@ const { area, studyType, endDate, institution } = Astro.props;
   }
 
   .study-name {
-    margin: 0.125rem;
+    margin-bottom: 0.125rem;
   }
 
   .study-institution,
   .study-date {
     color: hsl(var(--grey-three));
+  }
+
+  @media print {
+    .study-information {
+      margin-bottom: 0;
+    }
+
+    .study-name {
+      font-weight: 500;
+    }
   }
 </style>

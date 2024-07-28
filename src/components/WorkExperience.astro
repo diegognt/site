@@ -65,4 +65,10 @@ const { name, position, url, startDate, endDate, highlights } = Astro.props;
   .highlight {
     padding-left: 0.5rem;
   }
+
+  @media print {
+    h3 {
+      font-weight: 500;
+    }
+  }
 </style>

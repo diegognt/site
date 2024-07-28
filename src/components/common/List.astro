@@ -49,4 +49,18 @@ const Item: ItemComponent = availableItemComponents[type as ListType];
     flex-wrap: wrap;
     gap: 0.5rem;
   }
+
+  @media print {
+    .WorkExperience-list {
+      gap: 0.8rem;
+    }
+
+    .Study-list {
+      gap: 0.35rem;
+    }
+
+    .Skill-list {
+      gap: 0.25rem;
+    }
+  }
 </style>
