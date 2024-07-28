@@ -1,5 +1,10 @@
 ---
-const { title, customClass= "section", direction= "column", justify= "flex-start" } = Astro.props;
+const {
+  title,
+  customClass = "section",
+  direction = "column",
+  justify = "flex-start",
+} = Astro.props;
 ---
 
 <section class={customClass}>
@@ -12,14 +17,20 @@ const { title, customClass= "section", direction= "column", justify= "flex-start
     display: flex;
     flex-direction: var(--direction);
     justify-content: var(--justify);
-
   }
 
   h2 {
     color: hsl(var(--grey-five));
     font-size: 1.5rem;
     line-height: 1;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
 
+  @media print {
+    h2 {
+      font-size: 1.26rem;
+      font-weight: 600;
+      margin-bottom: 0.45rem;
+    }
+  }
 </style>

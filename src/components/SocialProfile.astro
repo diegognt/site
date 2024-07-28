@@ -37,9 +37,14 @@ const Icon: JSX.Element = icons[network];
     stroke: hsl(var(--grey-three));
   }
 
-
   a:focus-visible {
     outline: 2px solid hsl(var(--black));
     outline-offset: 2px;
+  }
+
+  @media print {
+    a {
+      font-size: 0.86rem;
+    }
   }
 </style>

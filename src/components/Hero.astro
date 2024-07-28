@@ -54,4 +54,18 @@ const { city, region, countryCode } = location;
     color: hsl(var(--grey-four));
     line-height: 1;
   }
+
+  @media print {
+    .name {
+      font-size: 1.6rem;
+    }
+
+    .label {
+      font-size: 1rem;
+    }
+
+    .contact > p.location {
+      font-size: 0.86rem;
+    }
+  }
 </style>
